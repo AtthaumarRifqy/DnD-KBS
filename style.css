@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  background: #eaebe4;
+  margin: 0px;
+  color: #353535;
+}
+
+.form-select {
+  background-color: #9d0a0e;
+  color: #eaebe4;
+
+  background-image: url(src/arrow.svg);
+  border: 0px;
+}
+
+.form-range {
+  background-color: #9d0a0e;
+  padding: 0.9rem !important;
+
+  font-size: 0.875rem !important;
+  border-radius: 0.25rem !important;
+}
+
+.form-range::-webkit-slider-thumb {
+  background: #ebebe6;
+  cursor: pointer;
+}
+
+.form-range::-moz-range-thumb {
+  background: #ebebe6;
+  cursor: pointer;
+}
