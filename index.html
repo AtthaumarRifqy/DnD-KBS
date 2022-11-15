@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -26,6 +27,9 @@
     ></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.com/libraries/bootstrap-slider"></script>
+    <script src="modules/bootstrap-slider.js"></script>
+    <link href="modules/bootstrap-slider.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -42,110 +46,131 @@
         What D&D 5e Adventure Should You Play?
       </h1>
     </div>
-    <div
-      class="grid place-content-center m-5 py-4 px-3 rounded-md gap-y-6 grid-cols-1"
-      style="background-color: #ebebe6; border: 3px solid #9d0a0e"
-    >
-      <div class="grid grid-cols-3 gap-x-4 gap-y-2">
-        <div>
-          <label for="level" class="form-label font-bold">Maximum Level</label>
-          <input
-            type="range"
-            class="form-range"
-            min="1"
-            max="20"
-            step="1"
-            id="level"
-          />
-        </div>
-        <div>
-          <label for="dm-diff" class="form-label font-bold"
-            >DM Difficulty</label
-          >
-          <select id="dm-diff" class="form-select form-select-sm">
-            <option value="Easy">Easy</option>
-            <option value="Medium">Medium</option>
-            <option value="Hard">Hard</option>
-            <option value="Very Hard">Very Hard</option>
-            <option value="N/A">N/A</option>
-          </select>
-        </div>
-        <div>
-          <label for="player-diff" class="form-label font-bold"
-            >Player Difficulty</label
-          >
-          <select id="player-diff" class="form-select form-select-sm">
-            <option value="Easy">Easy</option>
-            <option value="Medium">Medium</option>
-            <option value="Hard">Hard</option>
-            <option value="Very Hard">Very Hard</option>
-            <option value="N/A">N/A</option>
-          </select>
-        </div>
-        <div>
-          <label for="adv-type" class="form-label font-bold"
-            >Adventure Type</label
-          >
-          <select id="adv-type" class="form-select form-select-sm">
-            <option value="Standard">Standard</option>
-            <option value="Sandbox">Sandbox</option>
-            <option value="Dungeon Crawl">Dungeon Crawl</option>
-          </select>
-        </div>
-        <div>
-          <label for="location" class="form-label font-bold">Location</label>
-          <select id="location" class="form-select form-select-sm">
-            <option value="Rural Land">Rural Land</option>
-            <option value="Sea">Sea</option>
-            <option value="Urban">Urban</option>
-            <option value="Underdark">Underdark</option>
-            <option value="Space">Space</option>
-          </select>
-        </div>
-        <div>
-          <label for="year" class="form-label font-bold">Published Year</label>
-          <select id="year" class="form-select form-select-sm">
-            <option value="2014">2014</option>
-            <option value="2015">2015</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-            <option value="2018">2018</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-          </select>
-        </div>
-      </div>
-      <div>There is something here</div>
-      <button
-        class="rounded-full font-medium px-5 py-1"
-        style="background-color: #9d0a0e; color: #ebebe6"
-      >
-        Find Adventure Book!
-      </button>
-    </div>
-    <div
-      class="grid place-content-center m-5 py-4 px-3 rounded-md gap-y-6 grid-cols-1"
-    >
+    <div class="mx-10">
       <div
-        class="grid gap-4 p-4 grid-cols-2 rounded-md"
-        style="background-color: #ffffff"
+        class="grid place-content-center m-5 py-4 px-3 rounded-md gap-y-6 grid-cols-1"
+        style="background-color: #ebebe6; border: 3px solid #9d0a0e"
       >
-        <div class="rounded-md">
-          <img src="./src/award05.jpg" class="bg-cover bg-center" />
+        <div class="grid grid-cols-3 gap-x-4 gap-y-2">
+          <div class="flex flex-col">
+            <label for="level" class="form-label font-bold"
+              >Character Level Range</label
+            >
+            <div
+              class="form-select-sm grid place-content-center"
+              style="background-color: #9d0a0e"
+            >
+              <input
+                id="ex2"
+                type="text"
+                class="span2"
+                value=""
+                data-slider-min="1"
+                data-slider-max="20"
+                data-slider-step="1"
+                data-slider-value="[1,5]"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="dm-diff" class="form-label font-bold"
+              >DM Difficulty</label
+            >
+            <select id="dm-diff" class="form-select form-select-sm">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+              <option value="Very Hard">Very Hard</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+          <div>
+            <label for="player-diff" class="form-label font-bold"
+              >Player Difficulty</label
+            >
+            <select id="player-diff" class="form-select form-select-sm">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+              <option value="Very Hard">Very Hard</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+          <div>
+            <label for="adv-type" class="form-label font-bold"
+              >Adventure Type</label
+            >
+            <select id="adv-type" class="form-select form-select-sm">
+              <option value="Standard">Standard</option>
+              <option value="Sandbox">Sandbox</option>
+              <option value="Dungeon Crawl">Dungeon Crawl</option>
+            </select>
+          </div>
+          <div>
+            <label for="location" class="form-label font-bold">Location</label>
+            <select id="location" class="form-select form-select-sm">
+              <option value="Rural Land">Rural Land</option>
+              <option value="Sea">Sea</option>
+              <option value="Urban">Urban</option>
+              <option value="Underdark">Underdark</option>
+              <option value="Space">Space</option>
+            </select>
+          </div>
+          <div>
+            <label for="year" class="form-label font-bold"
+              >Published Year</label
+            >
+            <select id="year" class="form-select form-select-sm">
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+            </select>
+          </div>
         </div>
-        <div class="grid gap-2 grid-cols-1">
-          <h2 class="font-bold text-lg">The title</h2>
-          <p>blurb</p>
-          <button
-            class="rounded-full font-medium px-5 py-1"
-            style="background-color: #353535; color: #ebebe6"
-          >
-            Play This Book!
-          </button>
+        <div>There is something here</div>
+        <button
+          class="rounded-full font-medium px-5 py-1"
+          style="background-color: #9d0a0e; color: #ebebe6"
+        >
+          Find Adventure Book!
+        </button>
+      </div>
+      <div
+        class="grid place-content-center m-5 py-4 px-3 rounded-md gap-y-6 grid-cols-1"
+      >
+        <div
+          class="grid gap-4 p-4 grid-cols-2 rounded-md"
+          style="background-color: #ffffff"
+        >
+          <div class="rounded-md">
+            <img src="./src/award05.jpg" class="bg-cover bg-center" />
+          </div>
+          <div class="grid gap-2 grid-cols-1">
+            <h2 class="font-bold text-lg">The title</h2>
+            <p>blurb</p>
+            <button
+              class="rounded-full font-medium px-5 py-1"
+              style="background-color: #353535; color: #ebebe6"
+            >
+              Play This Book!
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $('.tooltip').tooltip();
+        /* Example 2 */
+        $('#ex2').slider({});
+      });
+    </script>
   </body>
 </html>
