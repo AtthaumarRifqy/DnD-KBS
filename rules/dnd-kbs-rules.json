@@ -2,7 +2,11 @@
 	"name": "dnd-kbs-rules",
 	"attributes": [
 		{
-			"name": "player-level",
+			"name": "min-player-level",
+			"type": "number"
+		},
+		{
+			"name": "max-player-level",
 			"type": "number"
 		},
 		{
@@ -35,12 +39,12 @@
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 5
 					},
@@ -68,6 +72,30 @@
 						"fact": "adventure-type",
 						"operator": "equal",
 						"value": "Standard"
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Dragon"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -76,19 +104,18 @@
 				"params": {
 					"campaign": "Lost Mine of Phandelver"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 8
 					},
@@ -116,6 +143,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2014
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Exploration"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Dragon"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -124,19 +175,18 @@
 				"params": {
 					"campaign": "Tyranny of the Dragon: Hoard of the Dragon Queen"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 8
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 15
 					},
@@ -164,6 +214,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2014
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Exploration"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Dragon"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -172,19 +246,18 @@
 				"params": {
 					"campaign": "Tyranny of the Dragon: Rise of Tiamat"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 15
 					},
@@ -212,6 +285,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2015
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Exploration"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Elemental"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -220,19 +317,18 @@
 				"params": {
 					"campaign": "Princes of the Apocalypse"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 15
 					},
@@ -260,6 +356,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2015
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Exploration"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Grim & Gritty"
+							}
+						]
 					}
 				]
 			},
@@ -268,19 +388,18 @@
 				"params": {
 					"campaign": "Out of the Abyss"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 10
 					},
@@ -308,6 +427,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2016
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Vampire"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Horror/ Thriller"
+							}
+						]
 					}
 				]
 			},
@@ -316,30 +459,15 @@
 				"params": {
 					"campaign": "Curse of Strahd"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
-					},
-					{
-						"any": [
-							{
-								"fact": "player-level",
-								"operator": "lessThanInclusive",
-								"value": 11
-							},
-							{
-								"fact": "player-level",
-								"operator": "lessThanInclusive",
-								"value": 12
-							}
-						]
 					},
 					{
 						"fact": "adventure-type",
@@ -365,6 +493,35 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2016
+					},
+					{
+						"fact": "max-player-level",
+						"operator": "lessThanInclusive",
+						"value": 11
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Giant"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Civil War/Political War/War"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							}
+						]
 					}
 				]
 			},
@@ -373,25 +530,15 @@
 				"params": {
 					"campaign": "Storm King’s Thunder"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
-					},
-					{
-						"any": [
-							{
-								"fact": "player-level",
-								"operator": "lessThanInclusive",
-								"value": 15
-							}
-						]
 					},
 					{
 						"fact": "location",
@@ -407,6 +554,35 @@
 						"fact": "adventure-type",
 						"operator": "equal",
 						"value": "Dungeon Crawl"
+					},
+					{
+						"fact": "max-player-level",
+						"operator": "lessThanInclusive",
+						"value": 15
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Grim & Gritty"
+							}
+						]
 					}
 				]
 			},
@@ -415,19 +591,18 @@
 				"params": {
 					"campaign": "Tales from the Yawning Portal"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 11
 					},
@@ -455,6 +630,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2017
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -463,19 +662,18 @@
 				"params": {
 					"campaign": "Tomb of Annihilation"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 5
 					},
@@ -503,6 +701,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2018
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Roleplay"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Factions/ Organization"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Civil War/Political War/War"
+							}
+						]
 					}
 				]
 			},
@@ -511,19 +733,18 @@
 				"params": {
 					"campaign": "Waterdeep: Dragon Heist"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 5
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 20
 					},
@@ -551,6 +772,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2018
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Grim & Gritty"
+							}
+						]
 					}
 				]
 			},
@@ -559,19 +804,18 @@
 				"params": {
 					"campaign": "Waterdeep: Dungeon of the Mad Mage"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 12
 					},
@@ -589,6 +833,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2019
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Horror/ Thriller"
+							}
+						]
 					}
 				]
 			},
@@ -597,19 +865,18 @@
 				"params": {
 					"campaign": "Ghost of Saltmarsh"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 7
 					},
@@ -637,6 +904,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2019
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Dragon"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -645,19 +936,18 @@
 				"params": {
 					"campaign": "Dragon of Icespire Peak"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 13
 					},
@@ -685,6 +975,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2019
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Demon/Devil"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -693,19 +1007,18 @@
 				"params": {
 					"campaign": "Baldur’s Gate: Descent into Avernus"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 2
 					},
@@ -733,6 +1046,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2019
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Steampunk/Post War"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							}
+						]
 					}
 				]
 			},
@@ -741,19 +1078,18 @@
 				"params": {
 					"campaign": "Eberron: Rising from the Last War"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 2
 					},
@@ -781,6 +1117,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2020
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Supernatural"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							}
+						]
 					}
 				]
 			},
@@ -789,19 +1149,18 @@
 				"params": {
 					"campaign": "Mythic Odysseys of Theros"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 12
 					},
@@ -829,6 +1188,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2020
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -837,19 +1220,18 @@
 				"params": {
 					"campaign": "Icewind Dale: Rime of the Frostmaiden"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 16
 					},
@@ -877,6 +1259,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2021
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Roleplay"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Grim & Gritty"
+							}
+						]
 					}
 				]
 			},
@@ -885,19 +1291,18 @@
 				"params": {
 					"campaign": "Candlekeep Mysteries"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 3
 					},
@@ -925,6 +1330,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2021
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Horror/ Thriller"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							}
+						]
 					}
 				]
 			},
@@ -933,19 +1362,18 @@
 				"params": {
 					"campaign": "Van Richten’s Guide to Ravenloft"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 8
 					},
@@ -973,6 +1401,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2021
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Fey"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Lighthearted"
+							}
+						]
 					}
 				]
 			},
@@ -981,19 +1433,18 @@
 				"params": {
 					"campaign": "The Wild Beyond The Witchlight"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 3
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 12
 					},
@@ -1021,6 +1472,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2022
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Factions/ Organization"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Grim & Gritty"
+							}
+						]
 					}
 				]
 			},
@@ -1029,19 +1504,18 @@
 				"params": {
 					"campaign": "Critical Role: Call of the Netherdeep"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 3
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 12
 					},
@@ -1061,14 +1535,38 @@
 						"value": "Easy"
 					},
 					{
-						"fact": "location",
-						"operator": "equal",
-						"value": "Rural Land"
-					},
-					{
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2021
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Roleplay"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Factions/ Organization"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "School Life"
+							}
+						]
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Urban"
 					}
 				]
 			},
@@ -1077,19 +1575,18 @@
 				"params": {
 					"campaign": "Strixhaven: A Curriculum of Chaos"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 14
 					},
@@ -1117,6 +1614,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2022
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "School Life"
+							}
+						]
 					}
 				]
 			},
@@ -1125,19 +1646,18 @@
 				"params": {
 					"campaign": "Journeys through the Radiant Citadel"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 3
 					},
@@ -1165,6 +1685,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2022
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Dragon"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Heroic"
+							}
+						]
 					}
 				]
 			},
@@ -1173,19 +1717,18 @@
 				"params": {
 					"campaign": "Dragons of Stormwreck Isle"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 5
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 8
 					},
@@ -1213,6 +1756,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2022
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Monsters"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Lighthearted"
+							}
+						]
 					}
 				]
 			},
@@ -1221,19 +1788,18 @@
 				"params": {
 					"campaign": "Spelljammer: Adventures in Space"
 				}
-			},
-			"priority": 10
+			}
 		},
 		{
 			"conditions": {
 				"all": [
 					{
-						"fact": "player-level",
+						"fact": "min-player-level",
 						"operator": "greaterThanInclusive",
 						"value": 1
 					},
 					{
-						"fact": "player-level",
+						"fact": "max-player-level",
 						"operator": "lessThanInclusive",
 						"value": 11
 					},
@@ -1251,6 +1817,30 @@
 						"fact": "published-year",
 						"operator": "equal",
 						"value": 2022
+					},
+					{
+						"any": [
+							{
+								"fact": "keywords",
+								"operator": "isKeywordsEmpty",
+								"value": true
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Combat"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Dragon"
+							},
+							{
+								"fact": "keywords",
+								"operator": "contains",
+								"value": "Civil War/Political War/War"
+							}
+						]
 					}
 				]
 			},
@@ -1259,8 +1849,7 @@
 				"params": {
 					"campaign": "Dragonlance: Shadow of the Dragon Queen"
 				}
-			},
-			"priority": 10
+			}
 		}
 	]
 }
