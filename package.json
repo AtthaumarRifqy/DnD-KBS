@@ -1,6 +1,19 @@
 {
+  "name": "dnd-kbs",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
-    "json-rules-engine": "^6.1.2",
+    "bootstrap": "^5.2.2",
+    "bootstrap-slider": "^11.0.2",
+    "http": "^0.0.1-security",
+    "json-rules-engine": "^6.1.2"
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
     "tailwindcss": "^3.2.4"
   }
 }

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.com/libraries/bootstrap-slider"></script>
+    <script src="modules/bootstrap-slider.js"></script>
+    <link href="modules/bootstrap-slider.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+
+    <title>What D&D 5e Adventure Should You Play?</title>
+    <link rel="icon" type="image/x-icon" href="src/favicon.ico" />
+  </head>
+  <body>
+    <div
+      class="bg-cover flex justify-center flex-col"
+      style="
+        background-image: url(src/cover.png);
+        border-bottom-width: 5px;
+        border-top-width: 5px;
+        border-color: #9d0a0e;
+      "
+    >
+      <h1 class="text-4xl text-white font-black m-24 text-center">
+        What D&D 5e Adventure Should You Play?
+      </h1>
+    </div>
+    <div class="mx-64">
+      <div
+        class="grid place-content-center m-5 py-4 px-3 rounded-md gap-y-6 grid-cols-1"
+        style="background-color: #ebebe6; border: 3px solid #9d0a0e"
+      >
+        <div class="grid grid-cols-3 gap-x-4 gap-y-2">
+          <div class="flex flex-col">
+            <label for="level" class="form-label font-bold"
+              >Character Level Range</label
+            >
+            <div
+              class="form-select-sm grid place-content-center"
+              style="background-color: #9d0a0e; border-radius: 0.25rem"
+            >
+              <input
+                id="ex2"
+                type="text"
+                class="span2"
+                value=""
+                data-slider-min="1"
+                data-slider-max="20"
+                data-slider-step="1"
+                data-slider-value="[1,5]"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="dm-diff" class="form-label font-bold"
+              >DM Difficulty</label
+            >
+            <select id="dm-diff" class="form-select form-select-sm">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+              <option value="Very Hard">Very Hard</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+          <div>
+            <label for="player-diff" class="form-label font-bold"
+              >Player Difficulty</label
+            >
+            <select id="player-diff" class="form-select form-select-sm">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+              <option value="Very Hard">Very Hard</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+          <div>
+            <label for="adv-type" class="form-label font-bold"
+              >Adventure Type</label
+            >
+            <select id="adv-type" class="form-select form-select-sm">
+              <option value="Standard">Standard</option>
+              <option value="Sandbox">Sandbox</option>
+              <option value="Dungeon Crawl">Dungeon Crawl</option>
+            </select>
+          </div>
+          <div>
+            <label for="location" class="form-label font-bold">Location</label>
+            <select id="location" class="form-select form-select-sm">
+              <option value="Rural Land">Rural Land</option>
+              <option value="Sea">Sea</option>
+              <option value="Urban">Urban</option>
+              <option value="Underdark">Underdark</option>
+              <option value="Space">Space</option>
+            </select>
+          </div>
+          <div>
+            <label for="year" class="form-label font-bold"
+              >Published Year</label
+            >
+            <select id="year" class="form-select form-select-sm">
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+            </select>
+          </div>
+        </div>
+        <button
+          class="rounded-full font-medium px-5 py-1"
+          style="border: 1px solid #9d0a0e; color: #9d0a0e"
+          data-bs-toggle="collapse"
+          data-bs-target="#content"
+          aria-expanded="false"
+          aria-controls="collapse"
+        >
+          View More Filters
+        </button>
+        <div class="collapse" id="content">
+          <div class="grid grid-cols-3 gap-x-4 gap-y-2">
+            <div>
+              <label for="location" class="form-label font-bold"
+                >New DM Friendly</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Main RPG Pillar</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Combat">Combat</option>
+                <option value="Roleplay">Roleplay</option>
+                <option value="Exploration">Exploration</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Main Villain</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Dragon">Dragon</option>
+                <option value="Giant">Giant</option>
+                <option value="Vampire">Vampire</option>
+                <option value="Exploration">Factions/ Organization</option>
+                <option value="Elemental">Elemental</option>
+                <option value="Demon/Devil">Demon/Devil</option>
+                <option value="Monsters">Monsters</option>
+                <option value="Fey">Fey</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold">Theme</label>
+              <select id="location" class="form-select form-select-sm">
+                <option value="Heroic">Heroic</option>
+                <option value="Grim & Gritty">Grim & Gritty</option>
+                <option value="Horror/ Thriller">Horror/ Thriller</option>
+                <option value="Lighthearted">Lighthearted</option>
+                <option value="Civil War/Political War/War">
+                  Civil War/Political War/War
+                </option>
+                <option value="Steampunk/Post War">Steampunk/Post War</option>
+                <option value="Supernatural">Supernatural</option>
+                <option value="School Life">School Life</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Adventure Subtype</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Chase">Chase</option>
+                <option value="Investigation">Investigation</option>
+                <option value="Prison Escape">Prison Escape</option>
+                <option value="Quest Giving">Quest Giving</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >World Scale</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Multiple Cities & Regions">
+                  Multiple Cities & Regions
+                </option>
+                <option value="Large Region">Large Region</option>
+                <option value="Small Region">Small Region</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Plane/World</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Material Plane">Material Plane</option>
+                <option value="Ethereal Plane">Ethereal Plane</option>
+                <option value="Feywild">Feywild</option>
+                <option value="Nine Hells/Avernus">Nine Hells/Avernus</option>
+                <option value="Ravenloft">Ravenloft</option>
+                <option value="Eberron">Eberron</option>
+                <option value="Exandria">Exandria</option>
+                <option value="Theros">Theros</option>
+                <option value="Arcavios">Arcavios</option>
+                <option value="Krynn">Krynn</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Book Type</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Adventure">Adventure</option>
+                <option value="Adventure Collection">
+                  Adventure Collection
+                </option>
+                <option value="Sourcebook">Sourcebook</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Mechanic</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Unique">Unique</option>
+                <option value="Standard">Standard</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button
+          class="rounded-full font-medium px-5 py-1"
+          style="background-color: #9d0a0e; color: #ebebe6"
+        >
+          Find Adventure Book!
+        </button>
+      </div>
+      <div
+        class="grid place-content-center m-5 py-4 px-3 rounded-md gap-y-6 grid-cols-1"
+      >
+        <div
+          id="card"
+          class="flex flex-row p-4 space-x-5 rounded-md"
+          style="background-color: #ffffff"
+        >
+          <div class="rounded-md overflow-hidden">
+            <img
+              src="https://www.dndbeyond.com/avatars/28075/491/637961623572526419.jpeg"
+            />
+          </div>
+          <div class="flex flex-col space-y-5 justify-center">
+            <h2 class="font-extrabold text-2xl" style="color: #9d0a0e">
+              Dragonlance: Shadow of the Dragon Queen
+            </h2>
+            <p>
+              Dragonlance®: Shadow of the Dragon Queen™ is a tale of conflict
+              and defiance set during the legendary War of the Lance. Create
+              characters from Krynn, the world of the Dragonlance setting, then
+              march them to the front lines of battle against the terrifying
+              Dragon Armies. A Dungeons & Dragons® adventure that takes
+              characters from 1st to 11th level.
+            </p>
+            <div>
+              <a
+                class="rounded-full font-medium px-5 py-1 bg-gray-900 hover:bg-gray-700"
+                style="color: #ebebe6"
+                href="https://www.dndbeyond.com/marketplace/adventures/dragonlance-shadow-of-the-dragon-queen-digital-pre"
+                target="_blank"
+              >
+                Play This Book!
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('.tooltip').tooltip();
+        /* Example 2 */
+        $('#ex2').slider({});
+      });
+    </script>
+  </body>
+</html>
