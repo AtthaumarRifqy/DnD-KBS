@@ -1,0 +1,1266 @@
+{
+	"name": "dnd-kbs-rules",
+	"attributes": [
+		{
+			"name": "player-level",
+			"type": "number"
+		},
+		{
+			"name": "adventure-type",
+			"type": "string"
+		},
+		{
+			"name": "dm-difficulty",
+			"type": "string"
+		},
+		{
+			"name": "player-difficulty",
+			"type": "string"
+		},
+		{
+			"name": "location",
+			"type": "string"
+		},
+		{
+			"name": "published-year",
+			"type": "number"
+		},
+		{
+			"name": "keywords",
+			"type": "array"
+		}
+	],
+	"decisions": [
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 5
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2014
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Lost Mine of Phandelver"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 8
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2014
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Tyranny of the Dragon: Hoard of the Dragon Queen"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 8
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 15
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2014
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Tyranny of the Dragon: Rise of Tiamat"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 15
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Dungeon Crawl"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2015
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Princes of the Apocalypse"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 15
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Sandbox"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Underdark"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2015
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Out of the Abyss"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 10
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Sandbox"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2016
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Curse of Strahd"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"any": [
+							{
+								"fact": "player-level",
+								"operator": "lessThanInclusive",
+								"value": 11
+							},
+							{
+								"fact": "player-level",
+								"operator": "lessThanInclusive",
+								"value": 12
+							}
+						]
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Sandbox"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Very Hard"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2016
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Storm King’s Thunder"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"any": [
+							{
+								"fact": "player-level",
+								"operator": "lessThanInclusive",
+								"value": 15
+							}
+						]
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2017
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Dungeon Crawl"
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Tales from the Yawning Portal"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 11
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Dungeon Crawl"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2017
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Tomb of Annihilation"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 5
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Urban"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2018
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Waterdeep: Dragon Heist"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 5
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 20
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Dungeon Crawl"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Urban"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2018
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Waterdeep: Dungeon of the Mad Mage"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 12
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Sea"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2019
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Ghost of Saltmarsh"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 7
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2019
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Dragon of Icespire Peak"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 13
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2019
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Baldur’s Gate: Descent into Avernus"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 2
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2019
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Eberron: Rising from the Last War"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 2
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2020
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Mythic Odysseys of Theros"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 12
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Hard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2020
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Icewind Dale: Rime of the Frostmaiden"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 16
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2021
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Candlekeep Mysteries"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 3
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Dungeon Crawl"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2021
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Van Richten’s Guide to Ravenloft"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 8
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Urban"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2021
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "The Wild Beyond The Witchlight"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 3
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 12
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2022
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Critical Role: Call of the Netherdeep"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 3
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 12
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2021
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Strixhaven: A Curriculum of Chaos"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 14
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Medium"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Urban"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2022
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Journeys through the Radiant Citadel"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 3
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2022
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Dragons of Stormwreck Isle"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 5
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 8
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "dm-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "player-difficulty",
+						"operator": "equal",
+						"value": "Easy"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Space"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2022
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Spelljammer: Adventures in Space"
+				}
+			},
+			"priority": 10
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "player-level",
+						"operator": "greaterThanInclusive",
+						"value": 1
+					},
+					{
+						"fact": "player-level",
+						"operator": "lessThanInclusive",
+						"value": 11
+					},
+					{
+						"fact": "adventure-type",
+						"operator": "equal",
+						"value": "Standard"
+					},
+					{
+						"fact": "location",
+						"operator": "equal",
+						"value": "Rural Land"
+					},
+					{
+						"fact": "published-year",
+						"operator": "equal",
+						"value": 2022
+					}
+				]
+			},
+			"event": {
+				"type": "individual-decision-node",
+				"params": {
+					"campaign": "Dragonlance: Shadow of the Dragon Queen"
+				}
+			},
+			"priority": 10
+		}
+	]
+}
