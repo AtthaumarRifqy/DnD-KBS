@@ -272,35 +272,12 @@
       >
         <div
           id="card"
-          class="flex flex-row p-4 space-x-5 rounded-md"
+          class="flex flex-row p-4 justify-center rounded-md"
           style="background-color: #ffffff"
         >
-          <div class="rounded-md overflow-hidden">
-            <img
-              src="https://www.dndbeyond.com/avatars/28075/491/637961623572526419.jpeg"
-            />
-          </div>
-          <div class="flex flex-col space-y-5 justify-center">
-            <h2 class="font-extrabold text-2xl" style="color: #9d0a0e">
+            <h2 id="result" class="font-extrabold text-2xl" style="color: #9d0a0e">
               Dragonlance: Shadow of the Dragon Queen
             </h2>
-            <p>
-              Dragonlance®: Shadow of the Dragon Queen™ is a tale of conflict
-              and defiance set during the legendary War of the Lance. Create
-              characters from Krynn, the world of the Dragonlance setting, then
-              march them to the front lines of battle against the terrifying
-              Dragon Armies. A Dungeons & Dragons® adventure that takes
-              characters from 1st to 11th level.
-            </p>
-            <div>
-              <a
-                class="rounded-full font-medium px-5 py-1 bg-gray-900 hover:bg-gray-700"
-                style="color: #ebebe6"
-                href="https://www.dndbeyond.com/marketplace/adventures/dragonlance-shadow-of-the-dragon-queen-digital-pre"
-                target="_blank"
-              >
-                Play This Book!
-              </a>
             </div>
           </div>
         </div>
@@ -313,6 +290,25 @@
         /* Example 2 */
         $('#ex2').slider({});
       });
+
+      const Engine =require('json-rules-engine');
+      let rules = require('./rules/dnd-kbs-rules.json');
+      const inputs = {
+        'player-level': 3,
+        'adventure-type': 'Standard',
+        'dm-difficulty': 'Easy',
+        'player-difficulty': 'Easy',
+        location: 'Rural Land',
+        'published-year': 2021,
+      };
+
+      const processEngine = (inputs, decisions) => {
+        let engine = new Engine(decisions);
+   
+        return engine.run(inputs).then((results) => {
+          document.getElementById("result").innerHTML = result.events[0].params.campaign
+        });
+      };
     </script>
   </body>
 </html>
