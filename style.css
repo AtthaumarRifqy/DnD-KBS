@@ -35,3 +35,7 @@ body {
   background: #ebebe6;
   cursor: pointer;
 }
+
+.collapse.show {
+  visibility: visible;
+}
