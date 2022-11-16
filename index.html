@@ -31,6 +31,9 @@
     <script src="modules/bootstrap-slider.js"></script>
     <link href="modules/bootstrap-slider.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+
+    <title>What D&D 5e Adventure Should You Play?</title>
+    <link rel="icon" type="image/x-icon" href="src/favicon.ico" />
   </head>
   <body>
     <div
@@ -147,6 +150,15 @@
           <div class="grid grid-cols-3 gap-x-4 gap-y-2">
             <div>
               <label for="location" class="form-label font-bold"
+                >New DM Friendly</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
                 >Main RPG Pillar</label
               >
               <select id="location" class="form-select form-select-sm">
@@ -183,6 +195,67 @@
                 <option value="Steampunk/Post War">Steampunk/Post War</option>
                 <option value="Supernatural">Supernatural</option>
                 <option value="School Life">School Life</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Adventure Subtype</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Chase">Chase</option>
+                <option value="Investigation">Investigation</option>
+                <option value="Prison Escape">Prison Escape</option>
+                <option value="Quest Giving">Quest Giving</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >World Scale</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Multiple Cities & Regions">
+                  Multiple Cities & Regions
+                </option>
+                <option value="Large Region">Large Region</option>
+                <option value="Small Region">Small Region</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Plane/World</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Material Plane">Material Plane</option>
+                <option value="Ethereal Plane">Ethereal Plane</option>
+                <option value="Feywild">Feywild</option>
+                <option value="Nine Hells/Avernus">Nine Hells/Avernus</option>
+                <option value="Ravenloft">Ravenloft</option>
+                <option value="Eberron">Eberron</option>
+                <option value="Exandria">Exandria</option>
+                <option value="Theros">Theros</option>
+                <option value="Arcavios">Arcavios</option>
+                <option value="Krynn">Krynn</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Book Type</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Adventure">Adventure</option>
+                <option value="Adventure Collection">
+                  Adventure Collection
+                </option>
+                <option value="Sourcebook">Sourcebook</option>
+              </select>
+            </div>
+            <div>
+              <label for="location" class="form-label font-bold"
+                >Mechanic</label
+              >
+              <select id="location" class="form-select form-select-sm">
+                <option value="Unique">Unique</option>
+                <option value="Standard">Standard</option>
               </select>
             </div>
           </div>
