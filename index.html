@@ -29,6 +29,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.com/libraries/bootstrap-slider"></script>
     <script src="modules/bootstrap-slider.js"></script>
+    <script src="client.js"></script>
     <link href="modules/bootstrap-slider.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
 
@@ -143,35 +144,36 @@
           data-bs-target="#content"
           aria-expanded="false"
           aria-controls="collapse"
+          id="collapsible"
         >
           View More Filters
         </button>
         <div class="collapse" id="content">
           <div class="grid grid-cols-3 gap-x-4 gap-y-2">
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="new-dm" class="form-label font-bold"
                 >New DM Friendly</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="new-dm" class="form-select form-select-sm">
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="rpg-pillar" class="form-label font-bold"
                 >Main RPG Pillar</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="rpg-pillar" class="form-select form-select-sm">
                 <option value="Combat">Combat</option>
                 <option value="Roleplay">Roleplay</option>
                 <option value="Exploration">Exploration</option>
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="villain" class="form-label font-bold"
                 >Main Villain</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="villain" class="form-select form-select-sm">
                 <option value="Dragon">Dragon</option>
                 <option value="Giant">Giant</option>
                 <option value="Vampire">Vampire</option>
@@ -183,8 +185,8 @@
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold">Theme</label>
-              <select id="location" class="form-select form-select-sm">
+              <label for="theme" class="form-label font-bold">Theme</label>
+              <select id="theme" class="form-select form-select-sm">
                 <option value="Heroic">Heroic</option>
                 <option value="Grim & Gritty">Grim & Gritty</option>
                 <option value="Horror/ Thriller">Horror/ Thriller</option>
@@ -198,10 +200,10 @@
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="adv-subtype" class="form-label font-bold"
                 >Adventure Subtype</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="adv-subtype" class="form-select form-select-sm">
                 <option value="Chase">Chase</option>
                 <option value="Investigation">Investigation</option>
                 <option value="Prison Escape">Prison Escape</option>
@@ -209,10 +211,10 @@
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="world-scale" class="form-label font-bold"
                 >World Scale</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="world-scale" class="form-select form-select-sm">
                 <option value="Multiple Cities & Regions">
                   Multiple Cities & Regions
                 </option>
@@ -221,10 +223,10 @@
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="plane-world" class="form-label font-bold"
                 >Plane/World</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="plane-world" class="form-select form-select-sm">
                 <option value="Material Plane">Material Plane</option>
                 <option value="Ethereal Plane">Ethereal Plane</option>
                 <option value="Feywild">Feywild</option>
@@ -238,10 +240,10 @@
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="book-type" class="form-label font-bold"
                 >Book Type</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="book-type" class="form-select form-select-sm">
                 <option value="Adventure">Adventure</option>
                 <option value="Adventure Collection">
                   Adventure Collection
@@ -250,10 +252,10 @@
               </select>
             </div>
             <div>
-              <label for="location" class="form-label font-bold"
+              <label for="mechanic" class="form-label font-bold"
                 >Mechanic</label
               >
-              <select id="location" class="form-select form-select-sm">
+              <select id="mechanic" class="form-select form-select-sm">
                 <option value="Unique">Unique</option>
                 <option value="Standard">Standard</option>
               </select>
@@ -263,6 +265,7 @@
         <button
           class="rounded-full font-medium px-5 py-1"
           style="background-color: #9d0a0e; color: #ebebe6"
+          onclick="testFunc()"
         >
           Find Adventure Book!
         </button>
